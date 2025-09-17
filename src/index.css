@@ -8,6 +8,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'IvyMode', 'Raleway', Arial, sans-serif;
 }
 
+@theme {
+  --color-primary: #0A3F37;
+  --color-secondary: #FCF9F1;
+  --color-neutralDark: #2E2E2E;
+  --color-neutralLight: #F9F9F9;
+}
 
 /* FONTFACE DECLARATION */
 /* Raleway Regular */
@@ -107,4 +113,114 @@ h1, h2, h3, h4, h5, h6 {
        url('/fonts/ivy/IvyMode-BoldItalic.woff') format('woff');
   font-weight: 700;
   font-style: italic;
+}
+
+/* Leaflet Map Styles */
+.clean-map {
+  position: relative;
+}
+
+.clean-map .leaflet-container {
+  background: #f8f9fa;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: #202124;
+}
+
+.clean-map .leaflet-tile {
+  filter: contrast(1.1) saturate(1.1);
+}
+
+/* Marker styles */
+.custom-marker-google-style {
+  background: transparent !important;
+  border: none !important;
+}
+
+.google-pin {
+  position: relative;
+  width: 28px;
+  height: 25px;
+}
+
+.google-pin-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  background: #EA4335;
+  border-radius: 50% 50% 50% 0;
+  transform: translateX(-50%) rotate(-45deg);
+  box-shadow: 0 2px 4px rgba(234, 67, 53, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: googlePinDrop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.google-pin-head svg {
+  transform: rotate(45deg);
+  width: 12px;
+  height: 12px;
+}
+
+.google-pin-shadow {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 5px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 70%);
+  border-radius: 50%;
+  animation: googlePinShadow 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes googlePinDrop {
+  0% { transform: translateX(-50%) rotate(-45deg) translateY(-60px) scale(0.8); opacity: 0; }
+  50% { transform: translateX(-50%) rotate(-45deg) translateY(-10px) scale(1.1); opacity: 0.8; }
+  80% { transform: translateX(-50%) rotate(-45deg) translateY(2px) scale(0.95); opacity: 1; }
+  100% { transform: translateX(-50%) rotate(-45deg) translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes googlePinShadow {
+  0% { transform: translateX(-50%) scale(0.5); opacity: 0; }
+  50% { transform: translateX(-50%) scale(1.2); opacity: 0.6; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+/* Popup styling */
+.clean-popup .leaflet-popup-content-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.clean-popup .leaflet-popup-content {
+  margin: 8px 12px;
+  line-height: 1.4;
+  color: #202124;
+}
+
+.clean-popup .leaflet-popup-tip {
+  background: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide all controls */
+.clean-map .leaflet-control-attribution {
+  display: none !important;
+}
+
+.clean-map .leaflet-control-zoom {
+  display: none !important;
+}
+
+.clean-map .leaflet-control {
+  display: none !important;
 }
