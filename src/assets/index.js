@@ -1,6 +1,11 @@
 export const ASSETS =  {
   hero:{
     bgImage: '/images/hero/hero-bg.png',
+  },
+  about:{
+    bgImage: '/images/about/about-bg.png',
+    contentImage1: '/images/about/content-img1.png',
+    contentImage2: '/images/about/content-img2.png'
   }
 }
 
