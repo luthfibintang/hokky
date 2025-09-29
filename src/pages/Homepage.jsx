@@ -91,6 +91,167 @@ function Homepage() {
           ))}
         </div>
       </section>
+
+      {/* Section 4: Workflow */}
+      <section className='min-h-screen flex gap-16 px-36 py-24 relative items-center'>
+          <div className='absolute inset-0 -z-10'>
+            <img src={ASSETS.workflow.bgImage} alt="workflow background image" className='object-cover w-full h-full -z-5'/>
+          </div>  
+          <div className='absolute inset-0 bg-neutralDark/80 -z-10'/>
+
+          {/* Left side */}
+          <div className='flex flex-col relative w-[550px] h-[728px] bg-primary/65 rounded-lg overflow-hidden p-12 gap-8'>
+            <div className='absolute inset-0 -z-10'>
+              <img src={ASSETS.workflow.bgCard} alt="Background Card" className='object-cover w-full h-full'/>
+            </div>
+            
+            <div className='text-secondary flex flex-col gap-4'>
+              <h1 className='text-xl'>{CONTENT.workflow.title}</h1>
+              <h2 className='text-5xl'>{CONTENT.workflow.subtitle}</h2>
+            </div>
+            <p className='text-secondary'>{CONTENT.workflow.description}</p>
+          </div>
+
+          {/* Right Side */}
+          <div className='flex flex-col w-[940px] h-[728px] justify-between'>
+            <div className='flex w-full text-secondary gap-10'>
+              <div className='flex flex-col gap-3'>
+                <p className='text-xl'>{CONTENT.workflow.workflowCard[0].no}</p>
+                <h3 className='text-4xl'>{CONTENT.workflow.workflowCard[0].flowName}</h3>
+                <p>{CONTENT.workflow.workflowCard[0].flowDescription}</p>
+              </div>
+
+              <div className='flex flex-col gap-3'>
+                <p className='text-xl'>{CONTENT.workflow.workflowCard[1].no}</p>
+                <h3 className='text-4xl'>{CONTENT.workflow.workflowCard[1].flowName}</h3>
+                <p>{CONTENT.workflow.workflowCard[1].flowDescription}</p>
+              </div>
+            </div>
+
+            <div className='flex w-full text-secondary gap-10'>
+              <div className='flex flex-col gap-3'>
+                <p className='text-xl'>{CONTENT.workflow.workflowCard[2].no}</p>
+                <h3 className='text-4xl'>{CONTENT.workflow.workflowCard[2].flowName}</h3>
+                <p>{CONTENT.workflow.workflowCard[2].flowDescription}</p>
+              </div>
+
+              <div className='flex flex-col gap-3'>
+                <p className='text-xl'>{CONTENT.workflow.workflowCard[3].no}</p>
+                <h3 className='text-4xl'>{CONTENT.workflow.workflowCard[3].flowName}</h3>
+                <p>{CONTENT.workflow.workflowCard[3].flowDescription}</p>
+              </div>
+            </div>
+
+            <div className='flex w-full text-secondary gap-10'>
+              <div className='flex flex-col gap-3'>
+                <p className='text-xl'>{CONTENT.workflow.workflowCard[4].no}</p>
+                <h3 className='text-4xl'>{CONTENT.workflow.workflowCard[4].flowName}</h3>
+                <p>{CONTENT.workflow.workflowCard[4].flowDescription}</p>
+              </div>
+            </div>
+          </div>
+      </section>
+      
+      {/* Section 5: Portfolio */}
+      <section className='min-h-screen flex flex-col gap-16 px-36 py-24 items-center bg-secondary'>
+        {/* Portfolio Heading & Description */}
+        <div className='flex flex-col w-full gap-6 items-center text-primary'>
+          <h1 className='text-xl font-semibold'>{CONTENT.portfolio.title}</h1>
+          <h2 className='text-5xl font-semibold'>{CONTENT.portfolio.subtitle}</h2>
+          <p className='text-center'>{CONTENT.portfolio.description}</p>
+        </div>
+
+        {/* Portfolio Card */}
+        <div className='flex gap-10 h-140 w-full'>
+          {/* Portfolio Card 1 */}
+          <div className='flex items-end h-full w-2/5 relative p-8 overflow-hidden rounded-lg'>
+            <div className='absolute inset-0'>
+              <img src={CONTENT.portfolio.portfolioCard[0].portfolioImageUrl} alt="Portfolio background image" className='object-cover w-full h-full'/>
+            </div> 
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+            <div className='z-1 text-secondary flex flex-col gap-2'>
+              <p className='text-xl font-semibold'>{CONTENT.portfolio.portfolioCard[0].portfolioTitle}</p>
+              <p className='text-sm'>{CONTENT.portfolio.portfolioCard[0].portfolioLocation}</p>
+            </div>
+          </div>
+
+          <div className='flex flex-col gap-10 h-full w-3/5 '>
+            <div className='flex w-full flex-1 gap-10'>
+              {/* Portfolio Card 2 */}
+              <div className='flex items-end flex-1 relative overflow-hidden p-8 rounded-lg'>
+                <div className='absolute inset-0'>
+                  <img src={CONTENT.portfolio.portfolioCard[1].portfolioImageUrl} alt="Portfolio background image" className='object-cover w-full h-full'/>
+                </div> 
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                <div className='z-1 text-secondary flex flex-col gap-2'>
+                  <p className='text-xl font-semibold'>{CONTENT.portfolio.portfolioCard[1].portfolioTitle}</p>
+                  <p className='text-sm'>{CONTENT.portfolio.portfolioCard[1].portfolioLocation}</p>
+                </div>
+              </div>
+
+              {/* Portfolio Card 3 */}
+              <div className='flex items-end flex-1 relative p-8 overflow-hidden rounded-lg'>
+                <div className='absolute inset-0'>
+                  <img src={CONTENT.portfolio.portfolioCard[2].portfolioImageUrl} alt="Portfolio background image" className='object-cover w-full h-full'/>
+                </div> 
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                <div className='z-1 text-secondary flex flex-col gap-2'>
+                  <p className='text-xl font-semibold'>{CONTENT.portfolio.portfolioCard[2].portfolioTitle}</p>
+                  <p className='text-sm'>{CONTENT.portfolio.portfolioCard[2].portfolioLocation}</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Portofolio Card 4 */}
+            <di className='flex items-end flex-1 relative p-8 overflow-hidden rounded-lg'>
+              <div className='absolute inset-0'>
+                <img src={CONTENT.portfolio.portfolioCard[3].portfolioImageUrl} alt="Portfolio background image" className='object-cover w-full h-full'/>
+              </div> 
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+              <div className='z-1 text-secondary flex flex-col gap-2'>
+                <p className='text-xl font-semibold'>{CONTENT.portfolio.portfolioCard[3].portfolioTitle}</p>
+                <p className='text-sm'>{CONTENT.portfolio.portfolioCard[3].portfolioLocation}</p>
+              </div>
+            </di>
+          </div>
+        </div>
+
+        <div className='flex items-center justify-center'>
+          <SecondaryButton onClick={() => console.log('Go to contact')}>
+              {CONTENT.portfolio.cta}
+          </SecondaryButton>
+        </div>
+
+      </section>
+      
+      {/* Section 6: Why Us? */}
+      <section className='min-h-screen flex flex-col gap-16 px-36 py-24 items-center relative'>
+          <div className='absolute inset-0 -z-10'>
+            <img src={ASSETS.whyus.bgImage} alt="workflow background image" className='object-cover w-full h-full -z-5'/>
+          </div>  
+          <div className='absolute inset-0 bg-primary/80 -z-10'/>
+
+          {/* Heading and our advantage*/}
+          <div>
+            {/* Heading */}
+            <div>
+
+            </div>
+
+            {/* Our Advantage */}
+            <div>
+
+            </div>
+
+          </div>
+
+          {/* Statistic */}
+          <div>
+
+          </div>
+      </section>
+
+
     </Layout>
   )
 }
