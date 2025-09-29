@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../layouts/Layout'
 import { ASSETS, CONTENT } from '../assets'
 import { PrimaryButton, SecondaryButton } from '../components/ButtonComponents'
+import ServiceCard from '../components/ServiceCard'
 
 function Homepage() {
   return (
@@ -70,8 +71,25 @@ function Homepage() {
       </section>
 
       {/* Section 3: Services */}
-      <section className='h-screen flex'>
+      <section className='min-h-screen flex flex-col px-36 py-24 bg-secondary gap-12'>
+        {/* Heading and Description */}
+        <div className='flex flex-col items-center h-full gap-8'>
+          <h1 className='text-xl font-semibold text-primary'>{CONTENT.services.title}</h1>
+          <h2 className='text-5xl font-semibold text-primary'>{CONTENT.services.subtitle}</h2>
+          <p className='text-center text-primary'>{CONTENT.services.description}</p>
+        </div>
 
+        {/* Service card */}
+        <div className='flex justify-center items-center gap-8'>
+          {CONTENT.services.servicesCard.map((service, index) => (
+            <ServiceCard
+              key={index}
+              image={service.serviceImageUrl}
+              servicesTitle={service.serviceTitle}
+              servicesDescription={service.serviceDescription}
+            />
+          ))}
+        </div>
       </section>
     </Layout>
   )

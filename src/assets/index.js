@@ -23,5 +23,27 @@ export const CONTENT = {
       "Dengan pengalaman dan keterampilan tim profesional, kami tidak hanya memproduksi furnitur, tetapi juga membantu klien menciptakan ruang yang nyaman, elegan, dan penuh karakter. Komitmen kami adalah memberikan hasil yang berkualitas tinggi, tepat waktu, dan melebihi ekspektasi Anda."
     ],
     cta: "Lebih Lanjut"
+  },
+  services: {
+    title: "Layanan Kami",
+    subtitle: "Upholstery Custom untuk Setiap Ruang dan Kebutuhan",
+    description: "Wujudkan ide Anda menjadi kenyataaan dengan keahlian upholstery custom. Mulai dari kenyamanan hunian hingga kebutuhan furniture komersial yang tahan lama, setiap karya kami dirancang khusus agar sesuai dengan ruang, gaya, dan fungsi yang Anda butuhkan.",
+    servicesCard: [
+      {
+        serviceTitle: "Custom Manufacturing",
+        serviceDescription: "Setiap furniture diproduksi dengan detail yang presisi menggunakan teknologi modern dan keahlian tradisional yang teruji.",
+        serviceImageUrl: "/images/service/service1.jpg"
+      },
+      {
+        serviceTitle: "Material Consultation & Design Support",
+        serviceDescription: "Bantuan dalam pemilihan kain, kulit, warna, dan material lain sesuai konsep interior.",
+        serviceImageUrl: "/images/service/service2.jpg"
+      },
+      {
+        serviceTitle: "Upholstery & Reupholstery",
+        serviceDescription: "Menghadirkan tampilan baru pada furnitur lama melalui reupholstery. Memperbarui kain, busa, dan finishing untuk memberikan kenyamanan.",
+        serviceImageUrl: "/images/service/service3.jpg"
+      },
+    ]
   }
 }
