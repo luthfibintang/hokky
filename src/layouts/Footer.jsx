@@ -19,7 +19,7 @@ function Footer() {
         <div className='flex gap-24'>
           <div className='flex flex-col gap-8'>
             <h1 className='text-xl font-semibold'>Company</h1>
-            <ul className='flex flex-col gap-2'>
+            <ul className='flex flex-col gap-4'>
               <li><a href="/tentang-kami">Tentang Kami</a></li>
               <li><a href="/layanan">Layanan</a></li>
               <li><a href="/portfolio">Portfolio</a></li>
@@ -29,8 +29,8 @@ function Footer() {
 
           <div className='flex flex-col gap-8'>
             <h1 className='text-xl font-semibold'>Kontak Kami</h1>
-            <div className='flex flex-col gap-2'>
-              <ul className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-4'>
+              <ul className='flex flex-col gap-4'>
                 <li><a href="#" className='flex gap-2'><img src="/icons/mail.svg" width={20} height={20} alt="Mail icons" /> upholstery@hookey.com</a></li>
                 <li><a href="#" className='flex gap-2'><img src="/icons/phone.svg" width={20} height={20} alt="Phone icons" /> +62 812-3456-7890</a></li>
               </ul>
@@ -44,17 +44,17 @@ function Footer() {
 
           <div className='flex flex-col gap-6'>
             <h1 className='text-xl font-semibold'>Lokasi</h1>
-            <div>
+            <div className='flex flex-col gap-4'>
               <MapStyleSwitcher
                 lat={-6.301161198648552}
                 lng={106.69354578147998}
                 googleMapsLink="https://www.google.com/maps/dir/?api=1&destination=Jl.+Ir+H.+Juanda+No.88,+Cireundeu,+Kec.+Ciputat+Tim.,+Kota+Tangerang+Selatan,+Banten+15419"
-                width="200px"
-                height="80px"
+                width="300px"
+                height="100px"
                 className="rounded-lg"
               />
+              <p className='max-w-80'>Jl. Ir. H. Juanda No. 88A Cirendeu. Ciputat Timur Tangerang Selatan 1549</p>
             </div>
-            <p className='max-w-80'>Jl. Ir. H. Juanda No. 88A Cirendeu. Ciputat Timur Tangerang Selatan 1549</p>
           </div>
         </div>
         
