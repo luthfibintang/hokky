@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../layouts/Layout'
 import { ASSETS, CONTENT } from '../assets'
+import TestimonialCarousel from '../components/TestimonialCarousel'
 import { PrimaryButton, SecondaryButton, SecondaryButtonRevert } from '../components/ButtonComponents'
 import ServiceCard from '../components/ServiceCard'
 
@@ -285,7 +286,14 @@ function Homepage() {
           </div>
       </section>
       
-
+      {/* Section 7: Testimoni */}
+      <section className='min-h-[600px] flex flex-col gap-12 px-36 py-24 items-center bg-secondary text-primary'>
+        <div className='flex flex-col items-center gap-4'>
+          <h2 className='text-5xl font-semibold'>{CONTENT.testimonials.title}</h2>
+          <p className='text-sm'>{CONTENT.testimonials.subtitle}</p>
+        </div>
+        <TestimonialCarousel />
+      </section>
     </Layout>
   )
 }

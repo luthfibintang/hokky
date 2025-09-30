@@ -158,6 +158,44 @@ export const CONTENT = {
         description: "Furnitur Dibuat Custom Sesuai Kebutuhan Client"
       },
     ]
+  },
+  testimonials: {
+    title: "Apa Yang Pelanggan Katakan",
+    subtitle: "Testimoni Pelanggan Setelah Memesan Produk di H'Okky",
+    testimonialCards: [
+      {
+        id: 1,
+        name: "Rina Kurniawan",
+        position: "Owner Kafe Social Brew",
+        date: "12/1/2025",
+        profileImage: "/images/testimonials/profile1.jpg",
+        testimonial: "Kami melaku reupholstery untuk seluruh kursi makan di kafe, dan hasilnya luar biasa. Kursi tidak hanya terasa nyaman, tetapi juga tampil dengan warna dan tekstur yang sesuai konsep interior baru kami. Tim sangat komunikatif dan pengerjaan selesai lebih cepat dari perkiran."
+      },
+      {
+        id: 2,
+        name: "Budi Santoso",
+        position: "Head of Facility Management CIMB",
+        date: "27/12/2025",
+        profileImage: "/images/testimonials/profile2.jpg",
+        testimonial: "Kami juga kerja custom untuk ruang eksekutif dan hasilnya sangat memuaskan. Nyaman digunakan, elegan secara visual, dan kualitas material terasa premium. Seluruh tim kantor kami sangat menghargai detail dan ketepatan waktu dari pengerjaan ini!"
+      },
+      {
+        id: 3,
+        name: "Sarah Michelle",
+        position: "Interior Designer Hotel Grand Hyatt",
+        date: "15/12/2025",
+        profileImage: "/images/testimonials/profile3.jpg",
+        testimonial: "Pengalaman bekerja sama dengan H'Okky sangat profesional. Mereka memahami kebutuhan hotel mewah dan menghadirkan furniture yang tidak hanya indah tapi juga tahan untuk penggunaan intensif. Kualitas jahitan dan material benar-benar premium."
+      },
+      {
+        id: 4,
+        name: "Ahmad Rizky",
+        position: "Homeowner Apartemen Sudirman Park",
+        date: "8/12/2025",
+        profileImage: "/images/testimonials/profile4.jpg",
+        testimonial: "Custom headboard dan ottoman untuk kamar utama kami sempurna! Tim sangat detail dalam memahami keinginan kami dan hasilnya melebihi ekspektasi. Furniture terasa mewah dan nyaman, persis seperti yang kami impikan untuk rumah kami."
+      }
+    ]
   }
 
 }
