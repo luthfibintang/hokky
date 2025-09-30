@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../layouts/Layout'
 import { ASSETS, CONTENT } from '../assets'
-import { PrimaryButton, SecondaryButton } from '../components/ButtonComponents'
+import { PrimaryButton, SecondaryButton, SecondaryButtonRevert } from '../components/ButtonComponents'
 import ServiceCard from '../components/ServiceCard'
 
 function Homepage() {
@@ -232,25 +232,59 @@ function Homepage() {
           <div className='absolute inset-0 bg-primary/80 -z-10'/>
 
           {/* Heading and our advantage*/}
-          <div>
+          <div className='flex w-full h-140 gap-12'>
             {/* Heading */}
-            <div>
+            <div className='flex-1 flex flex-col h-full text-secondary gap-12'>
+              <div className='flex flex-col gap-6'>
+                <h1 className='text-5xl font-semibold'>{CONTENT.whyUs.title}</h1>
+                <h2 className='text-xl font-semibold'>{CONTENT.whyUs.subtitle}</h2>
+                <p className='leading-7'>{CONTENT.whyUs.description}</p>
+              </div>
+              <div>
+                <SecondaryButtonRevert onClick={() => console.log('Go to contact')}>
+                    {CONTENT.whyUs.cta}
+                </SecondaryButtonRevert>
+              </div>
 
             </div>
 
             {/* Our Advantage */}
-            <div>
-
+            <div className='flex-1 flex flex-col h-full gap-8'>
+              {CONTENT.whyUs.ourAdvantage.map((advantage, index) => (
+                <>
+                  <div className='flex gap-4 w-full items-start'>
+                    {/* Icons */}
+                    <div className='p-3 rounded-full border-1 border-secondary'>
+                      <img src={advantage.iconUrl} className='w-6'/> 
+                    </div>
+                    <div className='flex-1 flex flex-col gap-2 text-secondary'>
+                      <p className='font-semibold'>{advantage.advantageTitle}</p>
+                      <p className='text-sm'>{advantage.advantageDescription}</p>
+                    </div>
+                  </div>
+                  <div className='w-full h-[1px] bg-secondary/25 rounded-full' />
+                </>
+              ))}
             </div>
 
           </div>
 
           {/* Statistic */}
-          <div>
-
+          <div className='h-[200px] w-full flex gap-6 items-center justify-evenly rounded-4xl bg-primary p-6'>
+              {CONTENT.whyUs.statistics.map((stat, index) => (
+                <>
+                  <div className='flex flex-col items-center gap-4 max-w-60 text-secondary'>
+                    <h2 className='text-4xl font-semibold'>{stat.value}</h2>
+                    <p className='text-center'>{stat.description}</p>
+                  </div>
+                  {index < CONTENT.whyUs.ourAdvantage.length - 1 && (
+                    <div className='w-[2px] h-full bg-secondary/25 rounded-full' />
+                  )}
+                </>
+              ))}
           </div>
       </section>
-
+      
 
     </Layout>
   )

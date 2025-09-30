@@ -89,3 +89,47 @@ export const SecondaryButton = ({
     </button>
   )
 }
+
+export const SecondaryButtonRevert = ({ 
+  children, 
+  onClick, 
+  disabled = false, 
+  size = 'md', 
+  className = '',
+  type = 'button',
+  ...props 
+}) => {
+  const sizeClasses = {
+    sm: 'px-6 py-2 text-sm',
+    md: 'px-8 py-3 text-base',
+    lg: 'px-10 py-4 text-lg',
+    xl: 'px-12 py-5 text-xl'
+  }
+
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`
+        text-secondary border-1 border-secondary
+        hover:bg-secondary hover:text-primary 
+        font-semibold rounded-full
+        transition-colors duration-200 ease-in-out
+        disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer 
+        flex items-center gap-2
+        ${sizeClasses[size]}
+        ${className}
+      `}
+      {...props}
+    >
+      {children}
+      <svg 
+        className="w-4 h-4 fill-current transition-colors duration-200" 
+        viewBox="0 0 24 24"
+      >
+        <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z" />
+      </svg>
+    </button>
+  )
+}

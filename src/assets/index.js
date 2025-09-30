@@ -113,5 +113,51 @@ export const CONTENT = {
       },
     ]
   },
+  whyUs: {
+    title: "Mengapa Harus kami?",
+    subtitle: "Kualitas, Detail, dan Kenyamanan dalam Setiap Karya",
+    description: "Kami percaya bahwa upholstery bukan hanya tentang furnitur, melainkan tentang menghadirkan kenyamanan, estetika, dan daya tahan yang menyatu sempurna di setiap ruang.",
+    cta: "Hubungi Kami",
+    ourAdvantage: [
+      {
+        iconUrl: "/icons/hammer.svg",
+        advantageTitle: "Ahli Upholstery Berpengalaman",
+        advantageDescription: "Dikerjakan oleh pengrajin berpengalaman yang menguasi detail jahitan, padding, dan finishing, memastikan hasil yang presisi dan berkualitas tinggi"
+      },
+      {
+        iconUrl: "/icons/star.svg",
+        advantageTitle: "Material Premium & Standar Internasional",
+        advantageDescription: "Kami hanya menggunakan kain, kulit, busa, dan material rangka pilihan yang memenuhi standar kenyamanan dan daya tahan untuk penggunaan jangka panjang."
+      },
+      {
+        iconUrl: "/icons/wrench.svg",
+        advantageTitle: "Desain Sepenuhnya Custom",
+        advantageDescription: "Setiap proyek dibuat eksklusif sesuai kebutuhan, gaya, dan karakter ruang klien—baik untuk hunian pribadi, hotel, restoran, maupun fasilitas komersial lainnya."
+      },
+      {
+        iconUrl: "/icons/clock.svg",
+        advantageTitle: "Proses Transparan & Tepat Waktu",
+        advantageDescription: "Mulai dari konsultasi, pemilihan material, hingga pengerjaan, semuanya dilakukan dengan komunikasi terbuka. Kami menjamin pengerjaan sesuai jadwal dan anggaran yang telah disepakati."
+      },
+    ],
+    statistics: [
+      {
+        value: "5000+",
+        description: "Proyek Upholstery yang Berhasil Kami Selesaikan"
+      },
+      {
+        value: "200+",
+        description: "Klien yang Telah Percaya kepada Kami"
+      },
+      {
+        value: "28",
+        description: "Tenaga Ahli Upholstery yang Profesional & Terlatih"
+      },
+      {
+        value: "100%",
+        description: "Furnitur Dibuat Custom Sesuai Kebutuhan Client"
+      },
+    ]
+  }
 
 }
