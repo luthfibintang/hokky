@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { CONTENT } from '../assets'
 
-const testimonials = CONTENT.testimonials.testimonialCards
+const testimonials = CONTENT.homepage.testimonials.testimonialCards
 const DURATION = 400 // ms animation length
 const AUTO_INTERVAL = 5000 // ms between automatic slides (sweet spot ~6s for reading)
 

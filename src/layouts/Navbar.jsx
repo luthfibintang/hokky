@@ -22,7 +22,7 @@ function Navbar() {
       `}
     >
       <nav className="min-h-16 md:min-h-20 flex justify-between items-center px-4 md:px-20 lg:px-28 xl:px-36">
-        <h1 className="text-2xl font-semibold text-primary">H'okky</h1>
+        <h1 className="text-2xl font-semibold text-primary cursor-pointer"><a href="/">H'okky</a></h1>
 
         {/* Desktop Navbar */}
         <ul className="hidden md:flex gap-16 text-primary font-semibold">
