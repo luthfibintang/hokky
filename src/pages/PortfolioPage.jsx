@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import Layout from '../layouts/Layout'
 import { ASSETS, CONTENT } from '../assets'
 import PortfolioCard from '../components/PortfolioCard'
@@ -23,6 +23,10 @@ function PortfolioPage() {
     index += expected
     patternIndex++
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Layout>
@@ -70,7 +74,8 @@ function PortfolioPage() {
                 {items.map(item => (
                   <PortfolioCard
                     key={item.id}
-                    image={item.image}
+                    id={item.id}
+                    image={item.images ? item.images[0] : item.image}
                     title={item.title}
                     client={item.client}
                     size={isTrueTwoPattern ? 'lg' : 'sm'}
