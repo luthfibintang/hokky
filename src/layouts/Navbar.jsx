@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Gunakan threshold kecil (misal 10px) agar segera aktif saat user mulai scroll
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const showBg = scrolled || isMobileMenuOpen;
   return (
-    <header className="fixed top-0 left-0 right-0 z-99 bg-white/50 backdrop-blur-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-99 transition-all duration-300
+        ${showBg ? 'bg-white/50 backdrop-blur-sm shadow-[0_2px_8px_-2px_rgba(0,0,0,0.08)]' : 'bg-transparent'}
+      `}
+    >
       <nav className="min-h-16 md:min-h-20 flex justify-between items-center px-4 md:px-20 lg:px-28 xl:px-36">
-        <h1 className="text-2xl font-semibold text-primary">H'okky</h1>
+        <h1 className="text-2xl font-semibold text-primary cursor-pointer"><a href="/">H'okky</a></h1>
 
         {/* Desktop Navbar */}
         <ul className="hidden md:flex gap-16 text-primary font-semibold">
@@ -47,7 +64,7 @@ function Navbar() {
         </button>
       </nav>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-primary/10 backdrop-blur-lg border-t border-white/10">
+        <div className="md:hidden bg-white/50 backdrop-blur-lg border-t border-white/40 shadow-inner">
           <ul className="flex flex-col gap-4 p-6 text-primary">
             <li className="cursor-pointer text-sm">
               Tentang Kami
