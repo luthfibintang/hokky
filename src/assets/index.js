@@ -216,7 +216,7 @@ export const CONTENT = {
     ],
     // NOTE: Gunakan sementara sample.jpg untuk seluruh gambar. Nanti bisa diganti per item.
     items: [
-      { 
+      {
         id: 1,
         title: 'Lounge Sofa Set Emerald',
         client: 'Grand Hyatt Jakarta',
@@ -225,61 +225,105 @@ export const CONTENT = {
         resultDescription: 'Pengerjaan dimulai dari proses desain yang menyesuaikan dengan konsep interior hotel. Kami memilih material premium dengan kombinasi kain upholstery lembut dan rangka kayu solid untuk ketahanan jangka panjang. Tantangan terbesar ada pada menjaga keseimbangan antara estetika elegan dan kenyamanan maksimal bagi para tamu. Setelah melalui tahapan produksi yang teliti, sofa berhasil dipasang dengan presisi di area lounge. Hasil akhirnya adalah sofa custom dengan tampilan modern-klasik yang menyatu sempurna dengan nuansa hotel. Pihak manajemen sangat puas, dan sofa ini kini menjadi salah satu elemen yang paling banyak diapresiasi oleh tamu yang berkunjung.',
         images: ['/images/portfolio/sample3.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample2.jpg']
       },
-      { id: 2,  title: 'Fine Dining Chair Series',  client: 'Social House GI', category: 'dining_chair',
-        projectDescription: 'Seri kursi makan ini dikembangkan untuk restoran dengan tingkat okupansi tinggi. Kami memulai dengan observasi alur servis dan pola duduk pengunjung untuk menentukan dimensi optimal. Material dipilih yang mudah dibersihkan namun tetap taktil. Penekanan juga pada stabilitas struktur agar tidak berderit setelah penggunaan berulang.',
-        resultDescription: 'Hasilnya adalah kursi makan ergonomis dengan sandaran yang menopang area lumbar secara natural. Konstruksi rangka menggunakan kombinasi kayu keras dan joint tersembunyi yang memperpanjang umur pakai. Rotasi meja meningkat karena tamu merasa nyaman tanpa perlu sering menggeser posisi duduk.',
+      { 
+        id: 2,  
+        title: 'Fine Dining Chair Series',  
+        client: 'Social House GI', 
+        category: 'dining_chair',
+        projectDescription: 'Social House, sebagai restoran dengan tingkat okupansi tinggi, membutuhkan kursi makan yang mampu menahan penggunaan intensif tanpa mengorbankan estetika fine dining. Proyek dimulai dengan observasi mendalam pada alur servis staf dan pola interaksi pengunjung untuk menentukan dimensi yang optimal—cukup nyaman untuk durasi makan panjang, namun tetap efisien dalam penggunaan ruang. Material menjadi fokus utama; kami menyeleksi bahan pelapis yang mudah dibersihkan, tahan noda, namun tetap memberikan sentuhan taktil yang mewah. Stabilitas struktur menjadi prioritas, dengan pengembangan sistem sambungan rangka internal yang dirancang khusus untuk mencegah decit dan goyangan bahkan setelah ribuan kali diduduki.',
+        resultDescription: 'Hasil akhirnya adalah seri kursi makan yang secara ergonomis menopang area lumbar secara natural, mengurangi kelelahan dan meningkatkan kenyamanan tamu. Konstruksi rangka menggunakan kombinasi kayu mahoni solid dengan teknik sambungan tenon tersembunyi yang canggih, memastikan umur pakai yang jauh lebih panjang di lingkungan komersial yang sibuk. Pihak manajemen melaporkan adanya peningkatan efisiensi rotasi meja; tamu merasa sangat nyaman sehingga menikmati waktu mereka tanpa perlu sering menggeser posisi duduk. Kursi ini tidak hanya memenuhi brief fungsional, tetapi juga memperkuat citra premium dari restoran.',
         images: ['/images/portfolio/sample2.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample3.jpg']
       },
-      { id: 3,  title: 'Velvet Armchair Duo',       client: 'Private Residence Menteng', category: 'armchair',
-        projectDescription: 'Permintaan klien: dua armchair sebagai focal point ruang baca privat, aura hangat dan intim tanpa terasa berat. Kami memvalidasi beberapa varian busa untuk mencapai sensasi “sink softly, hold firmly”.',
-        resultDescription: 'Armchair akhir menggunakan velvet matte anti-crush, piping halus, dan sudut sandaran 105° untuk relaksasi. Tekstur kain memantulkan cahaya lembut sehingga ruang terasa lebih dalam dan cozy.',
+      { 
+        id: 3,  
+        title: 'Velvet Armchair Duo',       
+        client: 'Private Residence Menteng', 
+        category: 'armchair',
+        projectDescription: 'Klien memiliki permintaan spesifik untuk mengisi ruang baca pribadinya: dua unit armchair yang berfungsi sebagai focal point, memancarkan aura hangat dan intim tanpa mendominasi ruang. Tantangannya adalah menerjemahkan sensasi yang diinginkan menjadi bentuk fisik. Kami melalui proses validasi beberapa varian komposisi busa, dari memory foam hingga latex, untuk mencapai formula presisi yang kami sebut “sink softly, hold firmly”—sensasi tenggelam lembut saat pertama duduk, yang kemudian ditopang dengan kuat. Pemilihan kain juga melalui proses kurasi ketat untuk menemukan velvet yang tepat.',
+        resultDescription: 'Armchair yang dihasilkan menggunakan kain velvet matte dengan teknologi anti-crush, memastikan tampilannya tetap mewah tanpa jejak dudukan. Detail seperti piping halus yang mengikuti kontur kursi dan penentuan sudut sandaran ideal pada 105° diciptakan khusus untuk postur membaca yang rileks. Secara visual, tekstur kain yang unik memantulkan cahaya dari lampu baca secara lembut, memberikan ilusi ruang yang lebih dalam dan cozy. Klien merasa sangat puas karena kedua armchair ini berhasil menjadi \'jiwa\' dari ruang baca tersebut, sesuai dengan visi awalnya.',
         images: ['/images/portfolio/sample4.jpg','/images/portfolio/sample2.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample.jpg']
       },
-      { id: 4,  title: 'Curved Lounge Modular',     client: 'Hotel Indonesia Kempinski', category: 'sofa_lounge',
-        projectDescription: 'Modular curved dirancang untuk mengarahkan flow pergerakan tamu tanpa sekat fisik. Radius kurva ditentukan berdasar studi jalur dominan dan jarak antar titik duduk agar percakapan nyaman.',
-        resultDescription: 'Konfigurasi modular meningkatkan kapasitas efektif tanpa terasa padat. Kombinasi upholstery tone netral dan base kayu menegaskan garis arsitektur lobby.',
+      { 
+        id: 4,  
+        title: 'Curved Lounge Modular',     
+        client: 'Hotel Indonesia Kempinski', 
+        category: 'sofa_lounge',
+        projectDescription: 'Lobi Hotel Indonesia Kempinski yang luas dan megah memerlukan solusi tempat duduk yang dapat mengarahkan alur pergerakan tamu secara intuitif tanpa memerlukan sekat fisik yang kaku. Konsep sofa modular melengkung dirancang untuk tujuan ini. Proses desain dimulai dengan studi pemetaan jalur dominan para tamu—dari pintu masuk utama, menuju resepsionis, hingga ke lift. Berdasarkan data ini, kami menentukan radius kurva dan panjang setiap modul untuk menciptakan \'pulau-pulau\' percakapan yang nyaman dan alami.',
+        resultDescription: 'Implementasi sofa modular ini secara efektif meningkatkan kapasitas tempat duduk di lobi tanpa membuatnya terasa padat. Konfigurasi melengkung menciptakan zona-zona semi-privat yang mendorong interaksi. Kombinasi kain upholstery dalam tone netral yang elegan dan basis kayu solid berwarna gelap menegaskan garis-garis arsitektur lobi yang sudah ada. Hasilnya, lobi tidak hanya berfungsi sebagai area transit, tetapi juga sebagai destinasi di mana tamu merasa nyaman untuk menunggu, bekerja, atau bersosialisasi, meningkatkan pengalaman mereka secara keseluruhan.',
         images: ['/images/portfolio/sample2.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample4.jpg']
       },
-      { id: 5,  title: 'Modern Sectional Sofa',     client: 'Apartment Sudirman Park', category: 'sofa_lounge',
-        projectDescription: 'Ruang keluarga bentuk L dengan bukaan kaca besar memerlukan sectional rendah agar view tidak terhalang. Kami membuat modul configurable dengan chaise fleksibel kiri/kanan.',
-        resultDescription: 'Sofa menyatu dengan ruang, menjaga aliran cahaya alami dan memberi seating luas tanpa terasa massif.',
+      { 
+        id: 5,  
+        title: 'Modern Sectional Sofa',     
+        client: 'Apartment Sudirman Park', 
+        category: 'sofa_lounge',
+        projectDescription: 'Tantangan utama pada proyek ini adalah ruang keluarga berbentuk L di sebuah apartemen dengan bukaan kaca besar yang menyajikan pemandangan kota. Klien mensyaratkan sofa sectional berkapasitas besar untuk keluarga, namun dengan satu syarat mutlak: tidak boleh menghalangi pemandangan. Kami merancang sofa dengan profil rendah (low profile) dan mengembangkan modul yang dapat dikonfigurasi, termasuk sebuah chaise longue yang posisinya dapat dipindah ke sisi kiri atau kanan sesuai kebutuhan, memberikan fleksibilitas tata letak di masa depan.',
+        resultDescription: 'Sofa sectional yang kami produksi menyatu secara harmonis dengan arsitektur ruang. Dengan tinggi sandaran yang dirancang tepat di bawah garis jendela, aliran cahaya alami dan pemandangan kota tetap maksimal. Meskipun ukurannya besar, desainnya yang ramping dan kaki yang sedikit terangkat memberikan kesan ringan dan tidak masif. Sofa ini berhasil mentransformasi ruang keluarga menjadi area komunal yang fungsional dan nyaman tanpa mengorbankan aset terbesar dari properti tersebut: pemandangannya yang spektakuler.',
         images: ['/images/portfolio/sample3.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample2.jpg','/images/portfolio/sample.jpg']
       },
-      { id: 6,  title: 'Compact Guest Sofa',        client: 'Boutique Office Senopati', category: 'sofa_lounge',
-        projectDescription: 'Lobby kantor boutique dengan area terbatas menuntut sofa tamu yang ramping namun tetap premium. Lebar armrest dipersempit untuk hemat ruang tanpa mengorbankan kenyamanan.',
-        resultDescription: 'Memberi impresi profesional ringkas; mudah direkonfigurasi saat event kecil.',
+      { 
+        id: 6,  
+        title: 'Compact Guest Sofa',         
+        client: 'Boutique Office Senopati', 
+        category: 'sofa_lounge',
+        projectDescription: 'Untuk lobi sebuah kantor butik di area Senopati, di mana kesan pertama sangat penting namun ruang sangat terbatas, kami ditugaskan untuk menciptakan sofa tamu yang ideal. Tuntutannya adalah sofa yang terlihat premium dan berkelas, namun memiliki jejak fisik (footprint) yang minimal. Fokus utama desain kami adalah pada rekayasa proporsi. Lebar sandaran tangan (armrest) dipersempit secara signifikan, dan kedalaman dudukan dioptimalkan untuk kenyamanan jangka pendek khas ruang tunggu, menghemat ruang berharga tanpa mengorbankan postur duduk yang baik.',
+        resultDescription: 'Hasilnya adalah sebuah sofa dua dudukan yang ringkas namun tetap memancarkan aura profesional. Desainnya yang ramping memberikan impresi pertama yang tajam dan modern, selaras dengan citra perusahaan. Bobotnya yang relatif ringan dan ukurannya yang efisien juga membuatnya mudah dipindahkan atau direkonfigurasi oleh staf kantor untuk acara-acara kecil atau networking. Sofa ini menjadi bukti bahwa keterbatasan ruang tidak harus berarti kompromi pada gaya dan fungsionalitas.',
         images: ['/images/portfolio/sample4.jpg','/images/portfolio/sample2.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample3.jpg']
       },
-      { id: 7,  title: 'Executive Lounge Sofa',     client: 'CIMB Niaga HQ', category: 'sofa_lounge',
-        projectDescription: 'Ruang tunggu eksekutif memerlukan kursi dengan dukungan ergonomis subtle dan tone warna profesional hangat. Kami mengatur seat height agar transisi duduk-berdiri tetap effortless.',
-        resultDescription: 'Material upholstery membantu meredam noise, meningkatkan privasi percakapan.',
+      { 
+        id: 7,  
+        title: 'Executive Lounge Sofa',     
+        client: 'CIMB Niaga HQ', 
+        category: 'sofa_lounge',
+        projectDescription: 'Ruang tunggu eksekutif di kantor pusat CIMB Niaga memerlukan furnitur yang mencerminkan status, keseriusan, dan kenyamanan. Proyek ini berfokus pada penciptaan sofa dengan dukungan ergonomis yang subtle—tidak terlihat seperti kursi ortopedi, namun terasa menopang. Kami secara spesifik merancang ketinggian dudukan dan kekerasan busa untuk memastikan transisi dari posisi duduk ke berdiri tetap mudah dan effortless, sebuah detail penting bagi pengguna yang sering mengenakan setelan formal. Palet warna dan tekstur material dipilih untuk menciptakan suasana profesional yang hangat dan menenangkan.',
+        resultDescription: 'Salah satu keberhasilan tak terduga dari desain ini adalah properti akustik dari material upholstery yang kami pilih. Kain tenun dengan kerapatan tinggi ini terbukti membantu meredam kebisingan sekitar, secara efektif meningkatkan privasi percakapan di dalam lounge. Sofa ini tidak hanya berfungsi sebagai tempat duduk, tetapi juga sebagai elemen yang berkontribusi dalam menciptakan lingkungan yang kondusif untuk diskusi bisnis yang rahasia, sebuah nilai tambah yang sangat dihargai oleh pihak manajemen.',
         images: ['/images/portfolio/sample2.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample.jpg']
       },
-      { id: 8,  title: 'Nordic Dining Armchair',    client: 'Cafe Artisan Kemang', category: 'dining_chair',
-        projectDescription: 'Cafe bertema nordic membutuhkan kursi dengan siluet ringan. Kami optimalkan sudut sandaran agar nyaman tanpa cushion tambahan.',
-        resultDescription: 'Perputaran meja meningkat seraya rating kenyamanan tetap tinggi.',
+      { 
+        id: 8,  
+        title: 'Nordic Dining Armchair',   
+        client: 'Cafe Artisan Kemang', 
+        category: 'dining_chair',
+        projectDescription: 'Pemilik Cafe Artisan Kemang, yang mengusung tema desain Nordic, membutuhkan kursi makan yang selaras dengan filosofi minimalis, fungsional, dan alami. Tantangannya adalah menciptakan kursi dengan siluet yang sangat ringan dan bersih, namun tetap menawarkan kenyamanan superior tanpa perlu bantalan (cushion) tambahan. Proses desain kami berpusat pada studi ergonomi bentuk kayu. Kami membuat beberapa prototipe 1:1 untuk menguji dan menyempurnakan sudut kemiringan serta lengkungan sandaran punggung agar dapat menopang tubuh dengan sempurna.',
+        resultDescription: 'Hasilnya adalah sebuah dining armchair yang esensial dalam bentuk namun maksimal dalam fungsi. Terbuat dari kayu jati solid dengan finishing natural, kursi ini memancarkan kehangatan khas Skandinavia. Lengkungan sandarannya yang telah dioptimalkan terbukti sangat nyaman, bahkan untuk tamu yang duduk berlama-lama. Manajemen kafe mencatat bahwa selain pujian atas estetika, perputaran meja mereka justru sedikit meningkat sementara rating kenyamanan dari ulasan pelanggan tetap tinggi, sebuah kombinasi ideal untuk bisnis F&B.',
         images: ['/images/portfolio/sample3.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample2.jpg']
       },
-      { id: 9,  title: 'Ergonomic Office Chair',    client: 'Tech Startup SCBD', category: 'office_chair',
-        projectDescription: 'Tim engineering bekerja 8–10 jam duduk. Fokus desain: lumbar adaptif dan distribusi tekanan merata. Beberapa prototipe diuji dengan feedback langsung.',
-        resultDescription: 'Penurunan keluhan punggung tercatat pada survei internal bulan pertama.',
+      { 
+        id: 9,  
+        title: 'Ergonomic Office Chair',    
+        client: 'Tech Startup SCBD', 
+        category: 'office_chair',
+        projectDescription: 'Sebuah perusahaan rintisan teknologi di SCBD menyadari bahwa aset terbesar mereka adalah para engineer yang bekerja 8-10 jam sehari di depan komputer. Untuk meningkatkan kesejahteraan dan produktivitas, mereka berinvestasi dalam kursi kerja yang benar-benar ergonomis. Fokus utama desain kami adalah pada sistem penopang pinggang (lumbar) yang adaptif dan mekanisme distribusi tekanan duduk yang merata. Kami menjalankan program beta-testing, di mana beberapa prototipe kursi diuji langsung oleh tim engineering selama satu minggu penuh untuk mendapatkan feedback yang otentik dan terperinci.',
+        resultDescription: 'Setelah beberapa iterasi berdasarkan masukan pengguna, kami berhasil memproduksi kursi kerja final yang memenuhi semua kriteria. Fitur unggulannya termasuk penyangga lumbar yang dapat menyesuaikan diri dengan gerakan tubuh dan bantalan duduk dengan teknologi pressure-mapping. Dampaknya sangat signifikan; dalam survei internal yang dilakukan sebulan setelah penggunaan, perusahaan mencatat penurunan drastis dalam keluhan nyeri punggung dan leher di kalangan staf. Ini secara langsung berkontribusi pada peningkatan moral dan fokus kerja tim.',
         images: ['/images/portfolio/sample4.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample2.jpg','/images/portfolio/sample.jpg']
       },
-      { id: 10, title: 'Classic Wing Armchair',     client: 'Heritage House Bandung', category: 'armchair',
-        projectDescription: 'Foyer rumah kolonial memerlukan kursi aksen yang menangkap karakter heritage tanpa terlihat kuno. Kami mempertahankan proporsi wing klasik dengan adaptasi busa modern.',
-        resultDescription: 'Memberi transisi lembut antara area masuk dan ruang utama, memperkuat identitas rumah.',
+      { 
+        id: 10, 
+        title: 'Classic Wing Armchair',     
+        client: 'Heritage House Bandung', 
+        category: 'armchair',
+        projectDescription: 'Foyer sebuah rumah peninggalan kolonial di Bandung memerlukan sebuah kursi aksen yang mampu menangkap karakter \'heritage\' bangunan tanpa membuatnya terasa seperti museum yang kuno. Klien ingin sebuah statement piece yang ikonik. Pilihan jatuh pada desain wing armchair klasik, namun dengan sentuhan modern. Kami mempertahankan proporsi dan siluet agung dari desain aslinya, tetapi melakukan inovasi pada konstruksi internal, mengganti sistem per dan isian tradisional dengan adaptasi busa multi-densitas modern untuk kenyamanan dan durabilitas superior.',
+        resultDescription: 'Armchair yang dihasilkan menjadi jembatan visual yang sempurna antara masa lalu dan masa kini. Secara visual, ia mempertahankan keanggunan klasik yang memperkuat identitas rumah, namun saat diduduki, ia menawarkan kenyamanan yang tidak terduga dari sebuah kursi bergaya antik. Ditempatkan di foyer, kursi ini memberikan transisi yang lembut dan berkelas antara area masuk dan ruang utama, menyambut tamu dengan sebuah pelukan sejarah yang nyaman dan fungsional.',
         images: ['/images/portfolio/sample2.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample4.jpg']
       },
-      { id: 11, title: 'Low Profile Sofa Set',      client: 'Villa Estate Sentul', category: 'sofa_lounge',
-        projectDescription: 'Klien menginginkan seating yang tidak menghalangi panorama taman. Kami menurunkan back height dan menambah kedalaman duduk untuk postur santai.',
-        resultDescription: 'View tetap terbuka dan ruang terasa lapang, meningkatkan pengalaman relaksasi.',
+      { 
+        id: 11, 
+        title: 'Low Profile Sofa Set',      
+        client: 'Villa Estate Sentul', 
+        category: 'sofa_lounge',
+        projectDescription: 'Bertempat di sebuah vila di Sentul dengan pemandangan taman tropis yang menakjubkan, klien memiliki satu permintaan utama: set sofa untuk ruang keluarga yang terasa substansial dan nyaman, tetapi sama sekali tidak menghalangi panorama. Untuk menjawab tantangan ini, kami mengembangkan konsep desain \'low profile\'. Ketinggian sandaran punggung (back height) sengaja diturunkan secara signifikan, sementara kedalaman dudukan (seat depth) diperlebar untuk mendorong postur duduk yang lebih santai dan berbaring, memaksimalkan fungsi relaksasi.',
+        resultDescription: 'Hasil akhirnya adalah sebuah mahakarya keseimbangan. Set sofa ini memberikan kapasitas duduk yang luas dan kenyamanan mendalam bagi penghuni, namun secara visual tetap rendah dan tidak mengganggu. Pemandangan ke arah taman tetap terbuka lebar dan menjadi fokus utama ruangan. Dengan menghilangkan penghalang visual, ruang keluarga terasa jauh lebih lapang, menyatu dengan lanskap di luar, dan secara signifikan meningkatkan pengalaman relaksasi serta ketenangan di dalam vila.',
         images: ['/images/portfolio/sample4.jpg','/images/portfolio/sample2.jpg','/images/portfolio/sample.jpg','/images/portfolio/sample3.jpg']
       },
-      { id: 12, title: 'Hospitality Lobby Sofa',    client: 'Resort Ubud Bali', category: 'sofa_lounge',
-        projectDescription: 'Resort bertema tropis memerlukan sofa lobby yang menyatu dengan tekstur alam. Tone kain dipilih mendukung material batu dan kayu lokal.',
-        resultDescription: 'Area lobby menjadi titik kumpul utama tamu dengan durasi duduk lebih lama.',
+      { 
+        id: 12, 
+        title: 'Hospitality Lobby Sofa',    
+        client: 'Resort Ubud Bali', 
+        category: 'sofa_lounge',
+        projectDescription: 'Sebuah resort mewah di Ubud, yang desainnya sangat kental dengan elemen alam tropis, membutuhkan sofa lobi yang tidak terasa seperti elemen asing, melainkan bagian integral dari arsitektur. Proyek ini dimulai bukan dengan sketsa, melainkan dengan eksplorasi material. Kami mempelajari tekstur dan warna dari material lokal yang dominan di lobi—batu andesit, kayu kelapa, dan bambu. Tone dan tekstur kain upholstery dipilih secara cermat untuk beresonansi dan mendukung palet material alam tersebut, menciptakan dialog visual yang harmonis.',
+        resultDescription: 'Sofa lobi yang kami ciptakan berhasil menyatu dengan lingkungan sekitarnya. Bentuknya yang sedikit organik dan pilihan warnanya yang membumi membuatnya tampak seolah-olah tumbuh dari lantai lobi itu sendiri. Pihak manajemen resort melaporkan perubahan perilaku tamu yang menarik: durasi duduk rata-rata di lobi meningkat secara signifikan. Area lobi yang sebelumnya hanya area transit kini telah berubah menjadi titik kumpul utama dan ruang sosial yang hidup, di mana para tamu betah berlama-lama untuk bersantai dan menikmati suasana.',
         images: ['/images/portfolio/sample2.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample.jpg']
-      },
+      }
     ]
   }
 
