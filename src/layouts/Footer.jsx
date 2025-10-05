@@ -3,7 +3,7 @@ import MapStyleSwitcher from '../components/MapStyleSwitcher'
 
 function Footer() {
   return (
-    <footer className='w-full flex flex-col items-start gap-16 px-4 pt-3 md:px-8 md:pt-6 lg:px-16 lg:pt-14 xl:px-24 xl:pt-20  bg-primary text-neutralLight'>
+    <footer className='w-full flex flex-col items-start gap-16 px-36 pt-24  bg-primary text-neutralLight'>
       {/* Information Section */}
       <section className='flex flex-row w-full justify-between'>
         {/* Company Information */}

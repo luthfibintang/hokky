@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../layouts/Layout'
 import { ASSETS, CONTENT } from '../assets'
 import TestimonialCarousel from '../components/TestimonialCarousel'
@@ -6,6 +6,10 @@ import { PrimaryButton, SecondaryButton, SecondaryButtonRevert } from '../compon
 import ServiceCard from '../components/ServiceCard'
 
 function Homepage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Layout>
       {/* Section 1: Hero */}

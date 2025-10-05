@@ -18,6 +18,11 @@ export const ASSETS =  {
   },
   portfolio: {
     bgImage: '/images/portfolio/bg-img.jpg'
+  },
+  aboutUs: {
+    bgImage: '/images/about-us/bg-img.jpg',
+    visiIcon: '/images/about-us/rocket.svg',
+    misiIcon: '/images/about-us/target.svg',
   }
 }
 
@@ -325,6 +330,47 @@ export const CONTENT = {
         images: ['/images/portfolio/sample2.jpg','/images/portfolio/sample3.jpg','/images/portfolio/sample4.jpg','/images/portfolio/sample.jpg']
       }
     ]
+  },
+  aboutUs: {
+    title: "Tentang Kami",
+    about: {
+      title: "Kami Menciptakan Furnitur yang Indah & Berkualitas Tinggi",
+      description: [
+        "Hocky adalah perusahaan yang bergerak di bidang upholstery custom furniture. Hocky hadir untuk memenuhi kebutuhan furniture upholstery kustom dengan standar tertinggi. Kami melayani berbagai kebutuhan, dari hunian pribadi hingga proyek besar seperti hotel, restoran, atau rumah sakit. Produk kami seperti sofa, lounge, waiting chair, hingga bedset dibuat dengan cermat menggunakan material pilihan untuk memastikan kualitas, kenyamanan, dan daya tahan.",
+        "Dengan pengalaman dan keterampilan tim profesional, kami tidak hanya memproduksi furnitur, tetapi juga membantu klien menciptakan ruang yang nyaman, elegan, dan penuh karakter. Komitmen kami adalah memberikan hasil yang berkualitas tinggi, tepat waktu, dan melebihi ekspektasi Anda."
+      ],
+      contentImage: '/images/about-us/section1.jpg'
+    },
+    history: {
+      title: "Sejarah Perusahaan",
+      description: [
+        "Hocky berdiri dengan tujuan untuk menghadirkan sofa berkualitas tinggi melalui keahlian upholstery custom. Berawal dari sebuah workshop kecil, Hocky memulai perjalanan dengan membuat furnitur sederhana yang menekankan pada kenyamanan dan detail. Seiring waktu, permintaan semakin berkembang—dari hunian pribadi hingga proyek besar seperti hotel, restoran, dan rumah sakit. Komitmen pada kualitas material pilihan, desain elegan, dan pengerjaan presisi menjadikan Hocky dipercaya oleh banyak klien.",
+        "Hingga kini, Hocky terus konsisten menghadirkan furnitur yang tidak hanya fungsional, tetapi juga memberikan nilai estetika dan kenyamanan bagi setiap ruang."
+      ],
+      contentImage: [
+        "/images/about-us/section21.jpg",
+        "/images/about-us/section22.jpg",
+      ]
+    },
+    visionmision: {
+      visi: {
+        title: "Visi Kami",
+        description: "Menjadi perusahaan upholstery custom furniture terdepan yang menghadirkan produk berkualitas tinggi, elegan, dan fungsional untuk menciptakan ruang yang nyaman dan penuh karakter di setiap segmen kebutuhan, dari hunian pribadi hingga proyek skala besar."
+      },
+      misi: {
+        title: "Misi Kami",
+        description: [
+          "Menyediakan layanan upholstery custom furniture dengan standar tertinggi untuk berbagai kebutuhan klien.",
+          "Menggunakan material pilihan dan proses pengerjaan yang teliti demi kualitas, kenyamanan, dan daya tahan produk.",
+          "Mendukung klien dalam menciptakan ruang yang elegan, fungsional, dan berkarakter melalui desain furnitur yang tepat."
+        ]
+      },
+    },
+    endNote: {
+      title: "Siap Memulai Proyek Upholstery Kustom?",
+      subtitle: "Ceritakan ukuran, gaya, bahan, dan anggaran—kami bantu merancang solusi yang pas untuk ruang Anda.",
+      cta: "Konsultasi Gratis"
+    }
   }
 
 }
