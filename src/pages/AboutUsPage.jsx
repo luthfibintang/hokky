@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../layouts/Layout";
 import { ASSETS, CONTENT } from "../assets";
 import {
@@ -8,6 +8,10 @@ import {
 } from "../components/ButtonComponents";
 
 function AboutUsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Layout>
       {/* About Us Header */}
