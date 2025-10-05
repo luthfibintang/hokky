@@ -49,7 +49,7 @@ function PortfolioDetailPage() {
         </div>
 
         {/* Hasil yang Kami Capai */}
-  <div className='flex flex-col gap-12'>
+        <div className='flex flex-col gap-12'>
           <div className='flex flex-col gap-6 w-full items-center'>
             <h2 className='text-4xl md:text-5xl font-semibold text-primary'>Hasil yang Kami Capai</h2>
             <p className='leading-7 text-primary/85 text-sm md:text-base '>{item.resultDescription}</p>

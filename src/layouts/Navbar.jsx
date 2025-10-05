@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,21 +23,21 @@ function Navbar() {
       `}
     >
       <nav className="min-h-16 md:min-h-20 flex justify-between items-center px-4 md:px-20 lg:px-28 xl:px-36">
-        <h1 className="text-2xl font-semibold text-primary cursor-pointer"><a href="/">H'okky</a></h1>
+        <h1 className="text-2xl font-semibold text-primary cursor-pointer"><Link to="/">H'okky</Link></h1>
 
         {/* Desktop Navbar */}
         <ul className="hidden md:flex gap-16 text-primary font-semibold">
           <li>
-            <a href="/tentang-kami">Tentang Kami</a>
+            <Link to="/tentang-kami">Tentang Kami</Link>
           </li>
           <li>
-            <a href="/layanan">Layanan</a>
+            <Link to="/layanan">Layanan</Link>
           </li>
           <li>
-            <a href="/portfolio">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="/kontak">Kontak</a>
+            <Link to="/kontak">Kontak</Link>
           </li>
         </ul>
 
