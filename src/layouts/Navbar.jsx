@@ -23,21 +23,35 @@ function Navbar() {
       `}
     >
       <nav className="min-h-16 md:min-h-20 flex justify-between items-center px-4 md:px-20 lg:px-28 xl:px-36">
-        <h1 className="text-2xl font-semibold text-primary cursor-pointer"><Link to="/">H'okky</Link></h1>
+        <h1 className="text-2xl font-semibold text-primary cursor-pointer transition-all duration-300 hover:scale-110 ">
+          <Link to="/">H'okky</Link>
+        </h1>
 
         {/* Desktop Navbar */}
         <ul className="hidden md:flex gap-16 text-primary font-semibold">
-          <li>
-            <Link to="/tentang-kami">Home</Link>
+          <li className="relative group">
+            <Link to="/" className="transition-colors duration-300 ">
+              Home
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </li>
-          <li>
-            <Link to="/tentang-kami">Tentang Kami</Link>
+          <li className="relative group">
+            <Link to="/tentang-kami" className="transition-colors duration-300 ">
+              Tentang Kami
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </li>
-          <li>
-            <Link to="/layanan">Layanan</Link>
+          <li className="relative group">
+            <Link to="/layanan" className="transition-colors duration-300 ">
+              Layanan
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
+          <li className="relative group">
+            <Link to="/portfolio" className="transition-colors duration-300 ">
+              Portfolio
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </li>
         </ul>
 
@@ -67,16 +81,16 @@ function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white/50 backdrop-blur-lg border-t border-white/40 shadow-inner">
           <ul className="flex flex-col gap-4 p-6 text-primary">
-            <li className="cursor-pointer text-sm">
-              <Link to="/tentang-kami">Home</Link>
+            <li className="cursor-pointer text-sm transition-all duration-300  hover:translate-x-2">
+              <Link to="/">Home</Link>
             </li>
-            <li className="cursor-pointer text-sm">
+            <li className="cursor-pointer text-sm transition-all duration-300  hover:translate-x-2">
               <Link to="/tentang-kami">Tentang Kami</Link>
             </li>
-            <li className="cursor-pointer text-sm">
+            <li className="cursor-pointer text-sm transition-all duration-300  hover:translate-x-2">
               <Link to="/layanan">Layanan</Link>
             </li>
-            <li className="cursor-pointer text-sm">
+            <li className="cursor-pointer text-sm transition-all duration-300  hover:translate-x-2">
               <Link to="/portfolio">Portfolio</Link>
             </li>
           </ul>
