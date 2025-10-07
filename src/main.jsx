@@ -7,12 +7,14 @@ import Homepage from './pages/Homepage.jsx'
 import PortfolioPage from "./pages/PortfolioPage.jsx"
 import PortfolioDetailPage from './pages/PortfolioDetailPage.jsx'
 import AboutUsPage from './pages/AboutUsPage.jsx'
+import ServicesPage from './pages/ServicesPage.jsx'
 
 const router = createBrowserRouter([
   {path: "/", Component: Homepage},
   {path: "/portfolio", Component: PortfolioPage},
   {path: "/portfolio/:id", Component: PortfolioDetailPage},
-  {path: "/tentang-kami", Component: AboutUsPage}
+  {path: "/tentang-kami", Component: AboutUsPage},
+  {path: "/layanan", Component: ServicesPage}
 ])
 
 createRoot(document.getElementById('root')).render(

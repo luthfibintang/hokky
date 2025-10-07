@@ -28,6 +28,9 @@ function Navbar() {
         {/* Desktop Navbar */}
         <ul className="hidden md:flex gap-16 text-primary font-semibold">
           <li>
+            <Link to="/tentang-kami">Home</Link>
+          </li>
+          <li>
             <Link to="/tentang-kami">Tentang Kami</Link>
           </li>
           <li>
@@ -35,9 +38,6 @@ function Navbar() {
           </li>
           <li>
             <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/kontak">Kontak</Link>
           </li>
         </ul>
 
@@ -68,16 +68,16 @@ function Navbar() {
         <div className="md:hidden bg-white/50 backdrop-blur-lg border-t border-white/40 shadow-inner">
           <ul className="flex flex-col gap-4 p-6 text-primary">
             <li className="cursor-pointer text-sm">
-              Tentang Kami
+              <Link to="/tentang-kami">Home</Link>
             </li>
             <li className="cursor-pointer text-sm">
-              Layanan
+              <Link to="/tentang-kami">Tentang Kami</Link>
             </li>
             <li className="cursor-pointer text-sm">
-              Portfolio
+              <Link to="/layanan">Layanan</Link>
             </li>
             <li className="cursor-pointer text-sm">
-              Kontak
+              <Link to="/portfolio">Portfolio</Link>
             </li>
           </ul>
         </div>
