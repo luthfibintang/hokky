@@ -40,7 +40,7 @@ function PortfolioPage() {
 
         <div className='flex flex-col items-center gap-6 text-primary px-8'>
           <h1 className='text-5xl font-semibold'>{CONTENT.portfolio.title}</h1>
-            <p className='text-lg font-semibold text-center z-10 max-w-6xl'>{CONTENT.portfolio.subtitle}</p>
+          <p className='text-lg font-semibold text-center z-10 max-w-7xl'>{CONTENT.portfolio.subtitle}</p>
         </div>
       </section>
 

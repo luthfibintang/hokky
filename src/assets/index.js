@@ -23,6 +23,14 @@ export const ASSETS =  {
     bgImage: '/images/about-us/bg-img.jpg',
     visiIcon: '/images/about-us/rocket.svg',
     misiIcon: '/images/about-us/target.svg',
+  },
+  service: {
+    available1: '/images/services/available-service/image1.jpg',
+    available2: '/images/services/available-service/image2.jpg',
+    available3: '/images/services/available-service/image3.jpg',
+    detail1: '/images/services/service-detail/image1.jpg',
+    detail2: '/images/services/service-detail/image2.jpg',
+    detail3: '/images/services/service-detail/image3.jpg',    
   }
 }
 
@@ -366,6 +374,43 @@ export const CONTENT = {
         ]
       },
     },
+    endNote: {
+      title: "Siap Memulai Proyek Upholstery Kustom?",
+      subtitle: "Ceritakan ukuran, gaya, bahan, dan anggaran—kami bantu merancang solusi yang pas untuk ruang Anda.",
+      cta: "Konsultasi Gratis"
+    }
+  },
+  services: {
+    title: "Layanan Kami",
+    subtitle: "Wujudkan ide Anda menjadi kenyataaan dengan keahlian upholstery custom. Mulai dari kenyamanan hunian hingga kebutuhan furniture komersial yang tahan lama, setiap karya kami dirancang khusus agar sesuai dengan ruang, gaya, dan fungsi yang Anda butuhkan.",
+    availableServices: [
+      {
+        serviceTitle: "Upholstery & Reupholstery",
+        description: "Menghadirkan tampilan baru pada furnitur lama melalui reupholstery. Memperbarui kain, busa, dan finishing untuk memberikan kenyamanan."
+      },
+      {
+        serviceTitle: "Custom Manufacturing",
+        description: "Setiap furniture diproduksi dengan detail yang presisi menggunakan teknologi modern dan keahlian tradisional yang teruji."
+      },
+      {
+        serviceTitle: "Material Consultation & Design Support",
+        description: "Bantuan dalam pemilihan kain, kulit, warna, dan material lain sesuai konsep interior."
+      },
+    ],
+    serviceDetail: [
+      {
+        title: "Upholstery & Reupholstery",
+        description: "Upholstery adalah seni dan kerajinan melapisi atau memperbaiki furnitur, seperti sofa, kursi, dan ottoman. Proses ini meliputi penggantian kain, busa, pegas, dan seluruh material di dalamnya untuk mengembalikan tampilan dan kenyamanannya seperti baru."
+      },
+      {
+        title: "Custom Made",
+        description: "Kami percaya bahwa setiap ruang memiliki cerita unik, dan furnitur Anda seharusnya menjadi bagian dari cerita itu. Dengan layanan custom made furniture, kami menghadirkan karya yang benar-benar sesuai dengan kebutuhan, gaya, dan kepribadian Anda."
+      },
+      {
+        title: "Material Consultation & Design Support",
+        description: "Temukan kombinasi sempurna antara kenyamanan, daya tahan, dan estetika. Tim kami siap membantu Anda memilih bahan terbaik—mulai dari kain, kulit, hingga aksen detail—yang selaras dengan gaya interior dan kebutuhan ruang Anda. Kami memahami bahwa setiap proyek memiliki karakter unik, karena itu setiap rekomendasi kami didasarkan pada konsep desain, fungsi ruang, serta preferensi pribadi Anda."
+      },
+    ],
     endNote: {
       title: "Siap Memulai Proyek Upholstery Kustom?",
       subtitle: "Ceritakan ukuran, gaya, bahan, dan anggaran—kami bantu merancang solusi yang pas untuk ruang Anda.",
