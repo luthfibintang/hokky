@@ -5,6 +5,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel'
 import { PrimaryButton, SecondaryButton, SecondaryButtonRevert } from '../components/ButtonComponents'
 import ServiceCard from '../components/ServiceCard'
 import { openWhatsApp } from '../utils/whatsapp'
+import { Link } from 'react-router'
 
 function Homepage() {
   useEffect(() => {
@@ -55,9 +56,11 @@ function Homepage() {
               <p className='text-primary'>{CONTENT.homepage.about.description[1]}</p>
             </div>
             <div>
-              <PrimaryButton>
-                {CONTENT.homepage.about.cta}
-              </PrimaryButton>
+              <Link to="/tentang-kami">
+                <PrimaryButton>
+                  {CONTENT.homepage.about.cta}
+                </PrimaryButton>
+              </Link>
             </div>
           </div>
 
@@ -223,9 +226,11 @@ function Homepage() {
         </div>
 
         <div className='flex items-center justify-center'>
-          <SecondaryButton onClick={() => console.log('Go to contact')}>
-              {CONTENT.homepage.portfolio.cta}
-          </SecondaryButton>
+          <Link to="/portfolio">
+            <SecondaryButton>
+                {CONTENT.homepage.portfolio.cta}
+            </SecondaryButton>
+          </Link>
         </div>
 
       </section>
