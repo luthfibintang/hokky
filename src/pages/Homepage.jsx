@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import Layout from '../layouts/Layout'
-import { ASSETS, CONTENT } from '../assets'
+import { ASSETS, CONTENT, WHATSAPP_MESSAGES } from '../assets'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import { PrimaryButton, SecondaryButton, SecondaryButtonRevert } from '../components/ButtonComponents'
 import ServiceCard from '../components/ServiceCard'
+import { openWhatsApp } from '../utils/whatsapp'
 
 function Homepage() {
   useEffect(() => {
@@ -24,7 +25,7 @@ function Homepage() {
           <h1 className='font-semibold text-5xl text-primary'>{CONTENT.homepage.hero.title}</h1>
           <p className='text-lg text-primary'>{CONTENT.homepage.hero.description}</p>
           <div>
-            <PrimaryButton onClick={() => console.log('Go to contact')}>
+            <PrimaryButton onClick={() => openWhatsApp(WHATSAPP_MESSAGES.heroContact)}>
               {CONTENT.homepage.hero.cta}
             </PrimaryButton>
           </div>
@@ -54,7 +55,7 @@ function Homepage() {
               <p className='text-primary'>{CONTENT.homepage.about.description[1]}</p>
             </div>
             <div>
-              <PrimaryButton onClick={() => console.log('Go to contact')}>
+              <PrimaryButton>
                 {CONTENT.homepage.about.cta}
               </PrimaryButton>
             </div>
@@ -243,17 +244,15 @@ function Homepage() {
               <div className='flex flex-col gap-6'>
                 <h1 className='text-5xl font-semibold'>{CONTENT.homepage.whyUs.title}</h1>
                 <h2 className='text-xl font-semibold'>{CONTENT.homepage.whyUs.subtitle}</h2>
-                <p className='leading-7'>{CONTENT.homepage.whyUs.description}</p>
-              </div>
-              <div>
-                <SecondaryButtonRevert onClick={() => console.log('Go to contact')}>
-                    {CONTENT.homepage.whyUs.cta}
-                </SecondaryButtonRevert>
-              </div>
-
+              <p className='leading-7'>{CONTENT.homepage.whyUs.description}</p>
+            </div>
+            <div>
+              <SecondaryButtonRevert onClick={() => openWhatsApp(WHATSAPP_MESSAGES.contact)}>
+                  {CONTENT.homepage.whyUs.cta}
+              </SecondaryButtonRevert>
             </div>
 
-            {/* Our Advantage */}
+          </div>            {/* Our Advantage */}
             <div className='flex-1 flex flex-col h-full gap-8'>
               {CONTENT.homepage.whyUs.ourAdvantage.map((advantage, index) => (
                 <>
