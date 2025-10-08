@@ -1,3 +1,27 @@
+/**
+ * WhatsApp Message Templates
+ * Pre-defined message templates for different CTA buttons
+ */
+export const WHATSAPP_MESSAGES = {
+  // General contact message - used by "Hubungi Kami" buttons
+  contact: 'Halo! Saya tertarik untuk mengetahui lebih lanjut tentang Hokky dan layanan upholstery custom furniture yang ditawarkan. Bisakah Anda memberikan informasi lebih lanjut?',
+  
+  // Free consultation message - used by "Konsultasi Gratis" buttons
+  consultation: 'Halo! Saya ingin konsultasi gratis mengenai proyek upholstery custom furniture. Bisakah kita diskusikan lebih lanjut tentang kebutuhan saya?',
+  
+  // From About Us page
+  aboutUsContact: 'Halo! Saya baru saja membaca tentang Hokky dan tertarik dengan pengalaman 29 tahun Anda di bidang upholstery. Saya ingin berdiskusi tentang proyek furniture custom untuk [rumah/kantor/hotel/restoran]. Bisakah kita berbicara lebih lanjut?',
+  
+  // From Services page
+  servicesConsultation: 'Halo! Saya tertarik dengan layanan upholstery custom Hokky. Saya ingin konsultasi mengenai [sofa/kursi makan/lounge/bedset] untuk [hunian pribadi/proyek komersial]. Bisakah kita diskusikan detail dan estimasinya?',
+  
+  // From Homepage hero section
+  heroContact: 'Halo! Saya ingin mewujudkan ide furniture custom menjadi kenyataan. Bisakah kita diskusikan tentang kebutuhan upholstery saya?',
+  
+  // From Portfolio page
+  portfolioInquiry: 'Halo! Saya melihat portfolio Hokky dan sangat tertarik dengan kualitas karya Anda. Saya ingin mendiskusikan proyek serupa untuk [nama proyek/lokasi]. Bisakah kita berbicara lebih lanjut?',
+};
+
 export const ASSETS =  {
   homepage: {
     hero:{

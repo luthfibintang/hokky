@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import Layout from "../layouts/Layout";
-import { ASSETS, CONTENT } from "../assets";
+import { ASSETS, CONTENT, WHATSAPP_MESSAGES } from "../assets";
 import {
   PrimaryButton,
   SecondaryButton,
   SecondaryButtonRevert,
 } from "../components/ButtonComponents";
+import { openWhatsApp } from "../utils/whatsapp";
 
 function ServicesPage() {
   useEffect(() => {
@@ -245,7 +246,7 @@ function ServicesPage() {
         </h2>
         <p className="text-secondary">{CONTENT.services.endNote.subtitle}</p>
 
-        <SecondaryButtonRevert onClick={() => console.log("Go to web api")}>
+        <SecondaryButtonRevert onClick={() => openWhatsApp(WHATSAPP_MESSAGES.servicesConsultation)}>
           {CONTENT.services.endNote.cta}
         </SecondaryButtonRevert>
       </section>
