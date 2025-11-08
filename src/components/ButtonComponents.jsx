@@ -11,10 +11,10 @@ export const PrimaryButton = ({
   ...props 
 }) => {
   const sizeClasses = {
-    sm: 'px-6 py-2 text-sm',
-    md: 'px-8 py-3 text-base',
-    lg: 'px-10 py-4 text-lg',
-    xl: 'px-12 py-5 text-xl'
+    sm: 'px-4 py-1.5 text-xs sm:px-5 sm:py-2 sm:text-sm',
+    md: 'px-5 py-2 text-sm sm:px-6 sm:py-2.5 md:px-8 md:py-3 md:text-base',
+    lg: 'px-6 py-2.5 text-sm sm:px-8 sm:py-3 md:px-10 md:py-4 md:text-lg',
+    xl: 'px-8 py-3 text-base sm:px-10 sm:py-4 md:px-12 md:py-5 md:text-xl'
   }
 
   return (
@@ -28,7 +28,7 @@ export const PrimaryButton = ({
         font-semibold rounded-full
         transition-colors duration-200 ease-in-out
         disabled:opacity-50 disabled:cursor-not-allowed
-        flex items-center gap-2 cursor-pointer
+        flex items-center gap-1.5 sm:gap-2 cursor-pointer
         ${sizeClasses[size]}
         ${className}
       `}
@@ -36,7 +36,7 @@ export const PrimaryButton = ({
     >
       {children}
       <svg 
-        className="w-5 h-5 fill-current transition-colors duration-200" 
+        className="w-4 h-4 sm:w-5 sm:h-5 fill-current transition-colors duration-200" 
         viewBox="0 0 24 24"
       >
         <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z" />
@@ -56,10 +56,10 @@ export const SecondaryButton = ({
   ...props 
 }) => {
   const sizeClasses = {
-    sm: 'px-6 py-2 text-sm',
-    md: 'px-8 py-3 text-base',
-    lg: 'px-10 py-4 text-lg',
-    xl: 'px-12 py-5 text-xl'
+    sm: 'px-4 py-1.5 text-xs sm:px-5 sm:py-2 sm:text-sm',
+    md: 'px-5 py-2 text-sm sm:px-6 sm:py-2.5 md:px-8 md:py-3 md:text-base',
+    lg: 'px-6 py-2.5 text-sm sm:px-8 sm:py-3 md:px-10 md:py-4 md:text-lg',
+    xl: 'px-8 py-3 text-base sm:px-10 sm:py-4 md:px-12 md:py-5 md:text-xl'
   }
 
   return (
@@ -73,7 +73,7 @@ export const SecondaryButton = ({
         font-semibold rounded-full
         transition-colors duration-200 ease-in-out
         disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer 
-        flex items-center gap-2
+        flex items-center gap-1.5 sm:gap-2
         ${sizeClasses[size]}
         ${className}
       `}
@@ -81,7 +81,7 @@ export const SecondaryButton = ({
     >
       {children}
       <svg 
-        className="w-4 h-4 fill-current transition-colors duration-200" 
+        className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current transition-colors duration-200" 
         viewBox="0 0 24 24"
       >
         <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z" />
@@ -100,10 +100,10 @@ export const SecondaryButtonRevert = ({
   ...props 
 }) => {
   const sizeClasses = {
-    sm: 'px-6 py-2 text-sm',
-    md: 'px-8 py-3 text-base',
-    lg: 'px-10 py-4 text-lg',
-    xl: 'px-12 py-5 text-xl'
+    sm: 'px-4 py-1.5 text-xs sm:px-5 sm:py-2 sm:text-sm',
+    md: 'px-5 py-2 text-sm sm:px-6 sm:py-2.5 md:px-8 md:py-3 md:text-base',
+    lg: 'px-6 py-2.5 text-sm sm:px-8 sm:py-3 md:px-10 md:py-4 md:text-lg',
+    xl: 'px-8 py-3 text-base sm:px-10 sm:py-4 md:px-12 md:py-5 md:text-xl'
   }
 
   return (
@@ -117,7 +117,7 @@ export const SecondaryButtonRevert = ({
         font-semibold rounded-full
         transition-colors duration-200 ease-in-out
         disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer 
-        flex items-center gap-2
+        flex items-center gap-1.5 sm:gap-2
         ${sizeClasses[size]}
         ${className}
       `}
@@ -125,7 +125,7 @@ export const SecondaryButtonRevert = ({
     >
       {children}
       <svg 
-        className="w-4 h-4 fill-current transition-colors duration-200" 
+        className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current transition-colors duration-200" 
         viewBox="0 0 24 24"
       >
         <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z" />
