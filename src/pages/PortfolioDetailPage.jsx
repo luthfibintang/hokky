@@ -23,36 +23,36 @@ function PortfolioDetailPage() {
   return (
     <Layout>
       {/* Header */}
-      <section className='h-[50vh] w-full relative flex items-center justify-center'>
+      <section className='h-[40vh] sm:h-[45vh] md:h-[50vh] w-full relative flex items-center justify-center'>
         <div className='absolute inset-0 -z-10'>
           <img src={ASSETS.portfolio.bgImage} alt='hero background image' className='object-cover object-[50%_60%] w-full h-full'/>
         </div>
         <div className='-z-10 absolute inset-0 bg-gradient-to-t from-white/60 via-white/20 to-transparent' />
         <div className='-z-10 absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent'/>
-        <div className='flex flex-col items-center gap-4 text-primary px-8'>
-          <h1 className='text-5xl font-semibold'>{item.title}</h1>
-          <p className='text-sm font-medium'>client: {item.client}</p>
+        <div className='flex flex-col items-center gap-3 md:gap-4 text-primary px-4 sm:px-8'>
+          <h1 className='text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold text-center'>{item.title}</h1>
+          <p className='text-xs sm:text-sm font-medium'>client: {item.client}</p>
         </div>
       </section>
 
       {/* Descriptions */}
-      <section className='w-full px-36 py-24 flex flex-col gap-28'>
+      <section className='w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col gap-16 sm:gap-20 md:gap-24 lg:gap-28'>
         {/* Gambaran Proyek */}
-        <div className='flex w-full gap-20 items-center'>
-          <div className='flex-1 flex flex-col gap-10'>
-            <h2 className='text-4xl md:text-5xl font-semibold text-primary'>Gambaran Proyek</h2>
-            <p className='leading-7 text-primary/85 text-sm md:text-base'>{item.projectDescription}</p>
+        <div className='flex flex-col lg:flex-row w-full gap-8 md:gap-12 lg:gap-20 items-center'>
+          <div className='flex-1 flex flex-col gap-6 md:gap-8 lg:gap-10'>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl font-semibold text-primary'>Gambaran Proyek</h2>
+            <p className='leading-6 md:leading-7 text-primary/85 text-sm md:text-base'>{item.projectDescription}</p>
           </div>
-          <div className='flex-1 h-[480px] rounded-3xl overflow-hidden shadow'>
+          <div className='flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden shadow'>
             <img src={item.images[0]} alt={item.title} className='w-full h-full object-cover'/>
           </div>
         </div>
 
         {/* Hasil yang Kami Capai */}
-        <div className='flex flex-col gap-12'>
-          <div className='flex flex-col gap-6 w-full items-center'>
-            <h2 className='text-4xl md:text-5xl font-semibold text-primary'>Hasil yang Kami Capai</h2>
-            <p className='leading-7 text-primary/85 text-sm md:text-base '>{item.resultDescription}</p>
+        <div className='flex flex-col gap-8 md:gap-10 lg:gap-12'>
+          <div className='flex flex-col gap-4 md:gap-6 w-full items-center'>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl font-semibold text-primary text-center'>Hasil yang Kami Capai</h2>
+            <p className='leading-6 md:leading-7 text-primary/85 text-sm md:text-base text-center max-w-4xl'>{item.resultDescription}</p>
           </div>
           <GalleryCarousel images={item.images} />
         </div>
@@ -71,8 +71,15 @@ function GalleryCarousel({ images = [] }) {
   const [animating, setAnimating] = useState(false)
   const [direction, setDirection] = useState(null)
   const [incomingIndex, setIncomingIndex] = useState(null)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const refs = useRef({})
   const [paused, setPaused] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const goNext = useCallback(() => {
     if (animating || total < 3) { // still allow movement when total>2
@@ -126,6 +133,28 @@ function GalleryCarousel({ images = [] }) {
 
   const rendered = useMemo(() => {
     if (total === 0) return []
+    
+    // Mobile: show only left card
+    if (isMobile) {
+      if (!animating) {
+        return [{ key: 'l-' + leftIndex, index: leftIndex, state: 'center' }]
+      }
+      if (direction === 'next') {
+        return [
+          { key: 'exitL-' + leftIndex, index: leftIndex, state: 'exit-left' },
+          { key: 'enterR-' + rightIndex, index: rightIndex, state: 'enter-right' }
+        ]
+      }
+      if (direction === 'prev') {
+        return [
+          { key: 'exitL-' + leftIndex, index: leftIndex, state: 'exit-right' },
+          { key: 'enterL-' + incomingIndex, index: incomingIndex, state: 'enter-left' }
+        ]
+      }
+      return []
+    }
+    
+    // Desktop: show both cards
     if (!animating) {
       return [
         { key: 'l-' + leftIndex, index: leftIndex, state: 'left' },
@@ -147,29 +176,49 @@ function GalleryCarousel({ images = [] }) {
       ]
     }
     return []
-  }, [animating, direction, incomingIndex, leftIndex, rightIndex, total])
+  }, [animating, direction, incomingIndex, leftIndex, rightIndex, total, isMobile])
 
-  // Fixed card size per request within container padding px-36
-  const CARD_W = 700
+  // Card dimensions
   const CARD_H = 450
   const GAP = 30
-  const OFFSET = CARD_W/2 + GAP/2 // 400 + 60 = 460
-  const EXIT = OFFSET * 3
 
   const endTransform = (s) => {
+    if (isMobile) {
+      switch (s) {
+        case 'center': return 'translateX(0)'
+        case 'exit-left': return `translateX(-100%)`
+        case 'exit-right': return `translateX(100%)`
+        case 'enter-right': return 'translateX(0)'
+        case 'enter-left': return 'translateX(0)'
+        default: return 'translateX(0)'
+      }
+    }
+    // Desktop: use percentage-based transforms so cards can shrink
+    const OFFSET_PERCENT = 52 // percentage offset for dual cards
     switch (s) {
-      case 'left': return `translateX(-${OFFSET}px)`
-      case 'right': return `translateX(${OFFSET}px)`
-      case 'to-left': return `translateX(-${OFFSET}px)`
-      case 'to-right': return `translateX(${OFFSET}px)`
-      case 'exit-left': return `translateX(-${EXIT}px)`
-      case 'exit-right': return `translateX(${EXIT}px)`
-      case 'enter-right': return `translateX(${OFFSET}px)`
-      case 'enter-left': return `translateX(-${OFFSET}px)`
+      case 'left': return `translateX(-${OFFSET_PERCENT}%)`
+      case 'right': return `translateX(${OFFSET_PERCENT}%)`
+      case 'to-left': return `translateX(-${OFFSET_PERCENT}%)`
+      case 'to-right': return `translateX(${OFFSET_PERCENT}%)`
+      case 'exit-left': return `translateX(-${OFFSET_PERCENT * 3}%)`
+      case 'exit-right': return `translateX(${OFFSET_PERCENT * 3}%)`
+      case 'enter-right': return `translateX(${OFFSET_PERCENT}%)`
+      case 'enter-left': return `translateX(-${OFFSET_PERCENT}%)`
       default: return 'translateX(0)'
     }
   }
   const startTransform = (s) => {
+    if (isMobile) {
+      switch (s) {
+        case 'center': return 'translateX(0)'
+        case 'exit-left': return 'translateX(0)'
+        case 'exit-right': return 'translateX(0)'
+        case 'enter-right': return `translateX(100%)`
+        case 'enter-left': return `translateX(-100%)`
+        default: return 'translateX(0)'
+      }
+    }
+    const OFFSET_PERCENT = 52
     switch (s) {
       case 'left': return endTransform('left')
       case 'right': return endTransform('right')
@@ -177,8 +226,8 @@ function GalleryCarousel({ images = [] }) {
       case 'to-right': return endTransform('left')
       case 'exit-left': return endTransform('left')
       case 'exit-right': return endTransform('right')
-      case 'enter-right': return `translateX(${EXIT}px)`
-      case 'enter-left': return `translateX(-${EXIT}px)`
+      case 'enter-right': return `translateX(${OFFSET_PERCENT * 3}%)`
+      case 'enter-left': return `translateX(-${OFFSET_PERCENT * 3}%)`
       default: return 'translateX(0)'
     }
   }
@@ -194,23 +243,26 @@ function GalleryCarousel({ images = [] }) {
         })
       })
     }
-  }, [animating])
+  }, [animating, isMobile])
 
   return (
-    <div className='flex flex-col gap-4 items-center'
+    <div className='flex flex-col gap-4 items-center w-full'
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-    <div className='relative w-full h-[450px] overflow-hidden flex items-center justify-center'>
+    <div className='relative w-full max-w-7xl mx-auto h-[300px] sm:h-[350px] md:h-[450px] overflow-hidden flex items-center justify-center'>
         {rendered.map(obj => (
           <div
             key={obj.key}
             ref={el => { refs.current[obj.key] = el }}
             data-state={obj.state}
-            className='absolute will-change-transform rounded-2xl overflow-hidden shadow'
+            className={`absolute will-change-transform rounded-xl md:rounded-2xl overflow-hidden shadow h-[300px] sm:h-[350px] md:h-[450px] ${
+              isMobile 
+                ? 'w-full max-w-[500px] sm:max-w-[600px]' 
+                : 'w-[45%] max-w-[700px]'
+            }`}
             style={{
-              width: CARD_W + 'px',
-              height: CARD_H + 'px',
+              maxHeight: '90%',
               transform: startTransform(obj.state),
               transition: `transform ${DURATION}ms cubic-bezier(0.25,0.8,0.3,1)`
             }}
@@ -219,7 +271,7 @@ function GalleryCarousel({ images = [] }) {
           </div>
         ))}
       </div>
-      <div className='flex items-center justify-between w-full pt-4'>
+      <div className='flex items-center justify-between w-full max-w-7xl mx-auto pt-4'>
         <div className='text-xs tracking-wider text-primary/80 flex items-center gap-2 select-none'>
           <span>{leftIndex + 1}</span>
           <span className='opacity-40'>—</span>
